@@ -2,12 +2,44 @@
 
 <MudThemeProvider />
 <MudLayout>
-    <MudAppBar Elevation="1">
-        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+    <MudAppBar Elevation="1" Dense="true" Style="background-color: white">
+        <MudGrid Justify="Justify.Center">
+            <MudItem xs="3">
+                <MudPaper Elevation="0" >
+                    <MudImage Fluid="true" Src="images/logo-proauto.png" Alt="Logo Proauto Kimium" Class="rounded-lg" Width="200"></MudImage>
+                </MudPaper>
+            </MudItem>
+            <MudItem >
+                <MudPaper Elevation="0">
+                    <MudNavLink>Home</MudNavLink>
+                </MudPaper>
+            </MudItem>
+            <MudItem >
+                <MudPaper Elevation="0">
+                    <MudNavLink>Empresa</MudNavLink>
+                </MudPaper>
+            </MudItem>
+            <MudItem >
+                <MudPaper Elevation="0">
+                    <MudNavLink>Produtos</MudNavLink>
+                </MudPaper>
+            </MudItem>
+            <MudItem >
+                <MudPaper Elevation="0">
+                    <MudNavLink>Clientes</MudNavLink>
+                </MudPaper>
+            </MudItem>
+            <MudItem >
+                <MudPaper Elevation="0">
+                    <MudNavLink>Contato</MudNavLink>
+                </MudPaper>
+            </MudItem>
+            
+        </MudGrid>
     </MudAppBar>
-    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
-        <NavMenu />
-    </MudDrawer>
+    @* <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2"> *@
+    @*     $1$ <NavMenu /> #1# *@
+    @* </MudDrawer> *@
     <MudMainContent Class="mt-16 pa-4">
         @Body
     </MudMainContent>
