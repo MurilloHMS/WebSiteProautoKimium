@@ -1,2 +1,42 @@
 ﻿@page "/"
 
+
+<style>
+    body{
+        background-color: #1c648b;
+    }
+</style>
+
+<MudCarousel Class="mud-width-full" Style="height:500px; width: 100%;" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="true" TData="object" >
+    <MudCarouselItem Transition="Transition.Slide" >
+        <div class="d-flex " style="height:80%;">
+            <MudImage Class="mx-auto my-auto rounded-xl"   Src="images/HomeBanner01.png" Fluid="true"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Slide" >
+        <div class="d-flex " style="height:80%;">
+            <MudImage Class="mx-auto my-auto" Style="border-radius: 15px" Src="images/HomeBanner02.png" Fluid="true"></MudImage>
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
+<br><br><br><br><br><br>
+<MudItem xs="12" sm="3" Class="object-center mx-auto my-auto">
+    <MudPaper Class="rounded-xl">
+        <br>
+        <MudText Style="mso-foreground: #1c648b; " Align="Align.Center" Typo="Typo.h4">QUAL É O SEU NEGÓCIO</MudText>
+        <br/>
+    </MudPaper>
+    <br/>
+    <p style="text-align: center; font-size: 14px; color: white">Selecione o seu segmento e conheça o produto ideal para o seu negócio.<br/>
+        Desde limpezas simples, até as mais pesadas, temos a solução.</p>
+</MudItem>
+<br><br><br><br><br>
+<MudItem xs="12" sm="6" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")">
+    <MudGrid >
+        <MudItem xs="12" sm="10" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Accent1};")"></MudItem>
+        <MudItem xs="12" sm="10" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
+    </MudGrid>
+</MudItem>
+
+
+<br><br><br><br><br>

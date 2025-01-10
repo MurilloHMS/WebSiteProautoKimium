@@ -53,6 +53,10 @@ else
     app.UseHsts();
 }
 
+app.UseRequestLocalization(new RequestLocalizationOptions()
+    .AddSupportedCultures(new [] { "pt-BR"})
+    .AddSupportedUICultures(new [] { "pt-BR"}));
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
