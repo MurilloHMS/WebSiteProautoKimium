@@ -8,18 +8,23 @@
     .hover-background:hover img {
         filter: brightness(0) invert(1);
     }
+    
+    .title-labels {
+        filter: brightness(0) invert(1);
+        color: #ffffff;
+    }
 </style>
 <MudGrid Justify="Justify.Center">
     <MudItem xs="12" sm="6" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")">
         <MudGrid Justify="Justify.Center">
             <MudItem xs="12" sm="11" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
             <MudItem xs="12" sm="11" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background: #63c29d;")">
-                <MudItem xs="12" sm="3">
-                    <MudText Typo="Typo.body1" Style="color: white"><MudImage Src="images/alimentos-e-bebidas-icone-categoria.png" Width="25"></MudImage><strong> Alimentos e Bebidas</strong></MudText>
+                <MudItem xs="12" sm="3" Class="title-labels">
+                    <MudText Typo="Typo.body1"><MudImage Src="images/alimentos-e-bebidas-icone-categoria.png" Width="25"></MudImage><strong> Alimentos e Bebidas</strong></MudText>
                 </MudItem>
                 <MudGrid>
                     <MudItem xs="12" sm="3">
-                        <MudLink Href="" Underline="Underline.None">
+                        <MudLink Href="/Produtos/Laticinios" Underline="Underline.None">
                             <MudPaper Class="d-flex flex-column align-center justify-center mud-width-full py-3 rounded-xl hover-background">
                                 <MudText Typo="Typo.body1">
                                     <MudImage Src="images/laticinios.png" Width="25"/>
@@ -44,7 +49,7 @@
                     </MudItem>
                     <MudItem xs="12" sm="3">
                         <MudLink Href="" Underline="Underline.None">
-                            <MudPaper Class="d-flex flex-column align-center justify-center mud-width-full py-3 rounded-xl hover-background" Width="90%">
+                            <MudPaper Class="d-flex flex-column align-center justify-center mud-width-full py-1 rounded-xl hover-background" Width="90%">
                                 <MudText Typo="Typo.body2" Align="Align.Center"><MudImage Src="images/processadores-de-alimentos.png" Width="25"></MudImage> Processadoras de alimentos</MudText>
                             </MudPaper>
                         </MudLink>
@@ -79,8 +84,8 @@
             <MudFlexBreak/>
             <MudItem xs="12" sm="11" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
             <MudItem xs="12" sm="11" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background: #63c29d;")">
-                <MudItem xs="12" sm="6" >
-                    <MudText Typo="Typo.body1" Style="color: white"><MudImage Src="images/cozinhas-industriais.png" Width="25"></MudImage><strong> Cozinhas Industriais e Restaurantes</strong></MudText>
+                <MudItem xs="12" sm="6" Class="title-labels">
+                    <MudText Typo="Typo.body1"><MudImage Src="images/cozinhas-industriais.png" Width="25"></MudImage><strong> Cozinhas Industriais e Restaurantes</strong></MudText>
                 </MudItem>
                 <MudGrid>
                     <MudItem xs="12" sm="3">
@@ -118,8 +123,8 @@
             <MudFlexBreak/>
             <MudItem xs="12" sm="11" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
             <MudItem xs="12" sm="11" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background: #63c29d;")">
-                <MudItem xs="12" sm="6">
-                    <MudText Typo="Typo.body1" Style="color: white">
+                <MudItem xs="12" sm="6" Class="title-labels">
+                    <MudText Typo="Typo.body1">
                         <MudImage Src="images/automotivo-icone-categorias.png" Width="25"></MudImage>
                         <strong>
                             Automotivo
@@ -194,8 +199,8 @@
             <MudFlexBreak/>
             <MudItem xs="12" sm="11" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
             <MudItem xs="12" sm="11" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background: #63c29d;")">
-                <MudItem xs="12" sm="6">
-                    <MudText Typo="Typo.body1" Style="color: white">
+                <MudItem xs="12" sm="6" Class="title-labels">
+                    <MudText Typo="Typo.body1">
                         <MudImage Src="images/industrias-icone-categoria.png" Width="25"></MudImage>
                         <strong>
                             Indústrias
@@ -260,8 +265,8 @@
             <MudFlexBreak/>
             <MudItem xs="12" sm="11" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
             <MudItem xs="12" sm="11" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background: #63c29d;")">
-                <MudItem xs="12" sm="6">
-                    <MudText Typo="Typo.body1" Style="color: white">
+                <MudItem xs="12" sm="6" Class="title-labels">
+                    <MudText Typo="Typo.body1">
                         <MudImage Src="images/institucional-icone-categoria.png" Width="25"></MudImage>
                         <strong>
                              Institucional
@@ -398,8 +403,8 @@
             <MudFlexBreak/>
             <MudItem xs="12" sm="11" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
             <MudItem xs="12" sm="11" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background: #63c29d;")">
-                <MudItem xs="12" sm="6">
-                    <MudText Typo="Typo.body1" Style="color: white"><MudImage Src="images/lavanderias-icone-categoria.png" Width="25"/>
+                <MudItem xs="12" sm="6" Class="title-labels">
+                    <MudText Typo="Typo.body1"><MudImage Src="images/lavanderias-icone-categoria.png" Width="25"/>
                         <strong>
                             Lavanderias
                         </strong>
@@ -431,8 +436,8 @@
             <MudFlexBreak/>
             <MudItem xs="12" sm="11" Class="object-center mx-auto my-auto rounded-xl" Style="@($"background:{Colors.Indigo.Lighten5};")"></MudItem>
             <MudItem xs="12" sm="11" Class="object-center justify-center align-center mx-auto my-auto rounded-xl" Style="@($"background: #63c29d;")">
-                <MudItem xs="12" sm="6">
-                    <MudText Typo="Typo.body1" Style="color: white"><MudImage Src="images/aviacao.png" Width="25"/>
+                <MudItem xs="12" sm="6" Class="title-labels">
+                    <MudText Typo="Typo.body1"><MudImage Src="images/aviacao.png" Width="25"/>
                         <strong>
                             Aviação
                         </strong>
