@@ -32,60 +32,61 @@
 </MudItem>
 <br><br><br><br><br>
 
-<MudGrid>
-    @if (_produtos.Any() && _produtos.Count() > 0)
+<MudGrid Justify="Justify.Center">
+    @if (_produtos.Any() && _produtos.Count() >0)
     {
         @foreach (var produto in _produtos)
         {
             <MudItem Class="object-center align-center mx-auto my-auto" xs="12" sm="2">
-        <MudCard Class="rounded-xl" Style="background: #63c29d">
-            <MudPaper Style="background: #0000" Class="object-center align-center mx-auto my-auto " Elevation="0">
-                <MudImage Class="img-remove-background" Src="images/kimi-klap.png" Width="100" Fluid="true" ObjectFit="ObjectFit.Fill"/>
-            </MudPaper>
-            <MudCardContent>
-                <MudStack Justify="Justify.Center">
-                    <MudText Typo="Typo.h5">@produto.Description</MudText>
-                    <MudDivider DividerType="DividerType.FullWidth" FlexItem="true"/>
-                    <br/>
-                    <MudPaper>
-                        <MudText Typo="Typo.body2" Align="Align.Center"><strong>Produto: </strong>@produto.Name</MudText>
+
+                <MudCard Class="rounded-xl" Style="background: #63c29d">
+                    <MudPaper Style="background: #0000" Class="object-center align-center mx-auto my-auto " Elevation="0">
+                        <MudImage Class="img-remove-background" Src="images/kimi-klap.png" Width="100" Fluid="true" ObjectFit="ObjectFit.Fill"/>
                     </MudPaper>
-                    <MudPaper>
-                        <MudText Typo="Typo.body2" Align="Align.Center"><strong>Cor: </strong>@produto.Color</MudText>
-                    </MudPaper>
-                    <MudPaper>
-                        <MudText Typo="Typo.body2" Align="Align.Center"><strong>Diluição: </strong>@produto.Dilution</MudText>
-                    </MudPaper>
-                    <MudPaper>
-                        <MudText Typo="Typo.body2" Align="Align.Center"><strong>Embalagem: </strong>@produto.Packaging</MudText>
-                    </MudPaper>
-                </MudStack>
-                <br>
-                <MudForm>
-                    <MudGrid>
-                        <MudItem xs="12" sm="6">
+                    <MudCardContent>
+                        <MudStack Justify="Justify.Center">
+                            <MudText Typo="Typo.h5">@produto.Description</MudText>
+                            <MudDivider DividerType="DividerType.FullWidth" FlexItem="true"/>
+                            <br/>
                             <MudPaper>
-                                <MudNumericField T="int" Label="Quantidade" Max="1000" Min="1"/>
+                                <MudText Typo="Typo.body2" Align="Align.Center"><strong>Produto: </strong>@produto.Name</MudText>
                             </MudPaper>
-                        </MudItem>
-                        <MudItem xs="12" sm="6">
                             <MudPaper>
-                                <MudSelect T="string" Label="Litragem" Dense="true">
-                                    @foreach (var item in produto.Packaging.Split(",").ToList())
-                                    {
-                                        <MudSelectItem Value="item">@item</MudSelectItem>
-                                    }
-                                </MudSelect>
+                                <MudText Typo="Typo.body2" Align="Align.Center"><strong>Cor: </strong>@produto.Color</MudText>
                             </MudPaper>
-                        </MudItem>
-                    </MudGrid>
-                </MudForm>
-            </MudCardContent>
-            <MudCardActions Class="mx-auto my-auto">
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">Adicionar ao Carrinho</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </MudItem>
+                            <MudPaper>
+                                <MudText Typo="Typo.body2" Align="Align.Center"><strong>Diluição: </strong>@produto.Dilution</MudText>
+                            </MudPaper>
+                            <MudPaper>
+                                <MudText Typo="Typo.body2" Align="Align.Center"><strong>Embalagem: </strong>@produto.Packaging</MudText>
+                            </MudPaper>
+                        </MudStack>
+                        <br>
+                        <MudForm>
+                            <MudGrid>
+                                <MudItem xs="12" sm="6">
+                                    <MudPaper>
+                                        <MudNumericField T="int" Label="Quantidade" Max="1000" Min="1"/>
+                                    </MudPaper>
+                                </MudItem>
+                                <MudItem xs="12" sm="6">
+                                    <MudPaper>
+                                        <MudSelect T="string" Label="Litragem" Dense="true">
+                                            @foreach (var item in produto.Packaging.Split(",").ToList())
+                                            {
+                                                <MudSelectItem Value="item">@item</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </MudPaper>
+                                </MudItem>
+                            </MudGrid>
+                        </MudForm>
+                    </MudCardContent>
+                    <MudCardActions Class="mx-auto my-auto">
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">Adicionar ao Carrinho</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
         }
     }
 </MudGrid>
@@ -102,7 +103,8 @@
 
     private IEnumerable<Product> _produtos = new List<Product>
     {
-        new Product{Id = 1, Description = "Desengordurante e Desengraxante alcalino", Name = "KIMI KLAP - BB PRETA", Color = "Laranja", Dilution = "1 a 10%", Packaging = "5L, 20L, 50L, 100L"}
+        new Product{Id = 1, Description = "Desengordurante e Desengraxante alcalino", Name = "KIMI KLAP - BB PRETA", Color = "Laranja", Dilution = "1 a 10%", Packaging = "5L, 20L, 50L, 100L"},
+        new Product{Id = 2, Description = "Desengordurante e Desengraxante alcalino", Name = "KIMI KLAP - BB PRETA", Color = "Laranja", Dilution = "1 a 10%", Packaging = "5L, 20L"}
     };
     
 

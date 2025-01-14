@@ -53,6 +53,9 @@ else
     app.UseHsts();
 }
 
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseRequestLocalization(new RequestLocalizationOptions()
     .AddSupportedCultures(new [] { "pt-BR"})
     .AddSupportedUICultures(new [] { "pt-BR"}));

@@ -2,30 +2,20 @@
 
 @inject NavigationManager NavigationManager
 
-@* <MudNavMenu> *@
-@*     <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink> *@
-@*     <MudNavLink Href="counter" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Counter</MudNavLink> *@
-@*     <MudNavLink Href="weather" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Weather</MudNavLink> *@
-@*     <MudNavLink Href="auth" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Lock">Auth Required</MudNavLink> *@
-@*     <AuthorizeView> *@
-@*         <Authorized> *@
-@*             <MudNavLink Href="Account/Manage" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Person">@context.User.Identity?.Name</MudNavLink> *@
-@*             <form action="Account/Logout" method="post"> *@
-@*                 <AntiforgeryToken /> *@
-@*                 <input type="hidden" name="ReturnUrl" value="@currentUrl" /> *@
-@*                 <button type="submit" class="mud-nav-link mud-ripple"> *@
-@*                     <MudIcon Icon="@Icons.Material.Filled.Logout" Color="Color.Info" Class="mr-3"></MudIcon> Logout *@
-@*                 </button> *@
-@*             </form> *@
-@*         </Authorized> *@
-@*         <NotAuthorized> *@
-@*             <MudNavLink Href="Account/Register" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Person">Register</MudNavLink> *@
-@*             <MudNavLink Href="Account/Login" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Password">Login</MudNavLink> *@
-@*         </NotAuthorized> *@
-@*     </AuthorizeView> *@
-@* </MudNavMenu> *@
+<MudNavMenu >
+     <AuthorizeView>
+         <Authorized>
+             <form action="Account/Logout" method="post" hidden="true">
+                 <AntiforgeryToken />
+                 <input type="hidden" name="ReturnUrl" value="@currentUrl" />
+                 <button type="submit" class="mud-nav-link mud-ripple">
+                     <MudIcon Icon="@Icons.Material.Filled.Logout" Color="Color.Info" Class="mr-3"></MudIcon> Logout
+                 </button>
+             </form>
+         </Authorized>
+     </AuthorizeView>
+</MudNavMenu>
 
-<MudMenu></MudMenu>
 
 <MudGrid Justify="Justify.Center">
     <MudSpacer/>
@@ -51,11 +41,6 @@
     </MudItem>
     <MudItem >
         <MudPaper Elevation="0">
-            <MudNavLink>Clientes</MudNavLink>
-        </MudPaper>
-    </MudItem>
-    <MudItem >
-        <MudPaper Elevation="0">
             <MudNavLink>Contato</MudNavLink>
         </MudPaper>
     </MudItem>
@@ -69,18 +54,21 @@
                     <MudIconButton Icon="@Icons.Material.Filled.Person" Size="Size.Small"></MudIconButton>
                 </ActivatorContent>
                 <ChildContent>
-                    
                     <AuthorizeView>
                         <NotAuthorized>
                             <MudMenuItem Href="/account/login">Login</MudMenuItem>
                         </NotAuthorized>
                         <Authorized>
-                            <MudMenuItem Href="/account/profile">Perfil</MudMenuItem>
-                            <MudMenuItem Href="/account/logout">Sair</MudMenuItem>
+                            <MudMenuItem Href="/account/manage">Perfil</MudMenuItem>
+                            <form action="Account/Logout" method="post">
+                                <AntiforgeryToken />
+                                <input type="hidden" name="ReturnUrl" value="@currentUrl" />
+                                <button type="submit" class="mud-nav-link mud-ripple">
+                                    <MudIcon Icon="@Icons.Material.Filled.Logout" Color="Color.Info" Class="mr-3"></MudIcon> Logout
+                                </button>
+                            </form>
                         </Authorized>
                     </AuthorizeView>
-
-
                 </ChildContent>
             </MudMenu>
         </MudPaper>
