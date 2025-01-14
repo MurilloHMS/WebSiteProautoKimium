@@ -6,47 +6,7 @@
 <MudSnackbarProvider />
 <MudLayout>
     <MudAppBar Elevation="1" Dense="true" Style="background-color: white">
-        <MudGrid Justify="Justify.Center">
-            <MudSpacer/>
-            <MudItem xs="3">
-                <MudPaper Elevation="0">
-                    <MudImage Fluid="true" Src="images/logo-proauto.png" Alt="Logo Proauto Kimium" Class="rounded-lg" Width="200"></MudImage>
-                </MudPaper>
-            </MudItem>
-            <MudItem >
-                <MudPaper Elevation="0">
-                    <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
-                </MudPaper>
-            </MudItem>
-            <MudItem >
-                <MudPaper Elevation="0">
-                    <MudNavLink>Empresa</MudNavLink>
-                </MudPaper>
-            </MudItem>
-            <MudItem >
-                <MudPaper Elevation="0">
-                    <MudNavLink Href="/produtos" Match="NavLinkMatch.All">Produtos</MudNavLink>
-                </MudPaper>
-            </MudItem>
-            <MudItem >
-                <MudPaper Elevation="0">
-                    <MudNavLink>Clientes</MudNavLink>
-                </MudPaper>
-            </MudItem>
-            <MudItem >
-                <MudPaper Elevation="0">
-                    <MudNavLink>Contato</MudNavLink>
-                </MudPaper>
-            </MudItem>
-            <MudSpacer/>
-            <MudItem >
-                <MudPaper Elevation="0">
-                    <MudIconButton Icon="@Icons.Material.Filled.ShoppingCart" Size="Size.Small"></MudIconButton>
-                    |
-                    <MudIconButton Icon="@Icons.Material.Filled.Person" Size="Size.Small"></MudIconButton>
-                </MudPaper>
-            </MudItem>
-        </MudGrid>
+        <NavMenu/>
     </MudAppBar>
     @* <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2"> *@
     @*     $1$ <NavMenu /> #1# *@
