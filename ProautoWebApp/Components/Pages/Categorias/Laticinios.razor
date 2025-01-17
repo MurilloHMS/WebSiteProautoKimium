@@ -66,12 +66,12 @@
                             <MudGrid>
                                 <MudItem xs="12" sm="6">
                                     <MudPaper>
-                                        <MudNumericField T="int" Label="Quantidade" Max="1000" Min="1"/>
+                                        <MudNumericField T="int" Label=" Quantidade" Max="1000" Min="1"/>
                                     </MudPaper>
                                 </MudItem>
                                 <MudItem xs="12" sm="6">
                                     <MudPaper>
-                                        <MudSelect T="string" Label="Litragem" Dense="true">
+                                        <MudSelect T="string" Label=" Litragem" Dense="true">
                                             @foreach (var item in produto.Packaging.Split(",").ToList())
                                             {
                                                 <MudSelectItem Value="item">@item</MudSelectItem>

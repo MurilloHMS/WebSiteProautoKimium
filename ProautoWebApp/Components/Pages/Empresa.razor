@@ -65,7 +65,30 @@
 </MudGrid>
 <br><br><br><br><br><br><br><br>
 
+<MudCarousel Class="mud-width-full" Style="height:700px; width: 100%;" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="true" TData="object" >
+    <MudCarouselItem Transition="Transition.Fade" >
+        <div class="d-flex " style="height:80%;">
+            <MudImage Class="mx-auto my-auto rounded-xl"   Src="images/expedicao-min-1024x683.png" Fluid="true"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Fade" >
+        <div class="d-flex " style="height:80%;">
+            <MudImage Class="mx-auto my-auto" Style="border-radius: 15px" Src="images/fachada-min-1024x683.png" Fluid="true"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Fade" >
+        <div class="d-flex " style="height:80%;">
+            <MudImage Class="mx-auto my-auto" Style="border-radius: 15px" Src="images/foto-3-min-1024x683.png" Fluid="true"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="Transition.Fade" >
+        <div class="d-flex " style="height:80%;">
+            <MudImage Class="mx-auto my-auto" Style="border-radius: 15px" Src="images/produtos-min-1024x683.png" Fluid="true"></MudImage>
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
 
+<br><br><br><br><br>
 @code {
     private List<BreadcrumbItem> _items = new List<BreadcrumbItem>
     {
