@@ -1,7 +1,11 @@
 ﻿@implements IDisposable
 
 @inject NavigationManager NavigationManager
-
+<style>
+    body{
+        background: #1c648b;
+    }
+</style>
 <MudNavMenu >
      <AuthorizeView>
          <Authorized>
@@ -30,7 +34,7 @@
     </MudItem>
     <MudItem >
         <MudPaper Elevation="0">
-            <MudNavLink>Empresa</MudNavLink>
+            <MudNavLink Href="/empresa" Match="NavLinkMatch.All">Empresa</MudNavLink>
         </MudPaper>
     </MudItem>
     <MudItem >
