@@ -1,0 +1,43 @@
+.section-titulo{
+    background: var(--primary-color);
+    width: 40%;
+    padding: 20px 15px;
+    border-radius: 50px;
+    margin-top: 35px;
+    color: var(--banner-color);
+    font-weight: bold;
+    display: flex;    
+    justify-content: center;
+
+}
+.section-titulo:hover{
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+.section-apresentacao{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 30px;
+    padding: 12px;
+    font-size: 1.2em;
+}
+
+.section-produtos-e-servicos {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 30px;
+    padding: 12px;
+
+    h5 {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    p{
+        padding: 6px;
+
+    }
+}
