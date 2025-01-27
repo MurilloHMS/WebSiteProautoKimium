@@ -23,4 +23,29 @@
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Components\Produtos\Default-Product-Layout.razor" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Remove="Components\Pages\Produtos\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Components\Pages\Produtos\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Remove="Components\Pages\Produtos\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Remove="Components\Pages\Produtos\**" />
+  </ItemGroup>
+
 </Project>
