@@ -1,0 +1,37 @@
+﻿@page "/produtos"
+
+<PageTitle>Produtos</PageTitle>
+
+<MudItem xs="12" sm="6" Class="object-center align-center mx-auto my-auto" Style="color: #ffffff">
+    <MudText Typo="Typo.h4" Style="color: #ffffff"> Produtos</MudText>
+    <MudBreadcrumbs Items="_items" Class="mx-auto my-auto align-center">
+        <ItemTemplate Context="item">
+            <MudLink Href="@item.Href" Color="Color.Inherit" Underline="Underline.None">@item.Text.ToUpper()</MudLink>
+        </ItemTemplate>
+        <SeparatorTemplate>
+            <MudIcon Icon="@Icons.Material.Filled.ArrowForwardIos" Size="Size.Small"/>
+        </SeparatorTemplate>
+    </MudBreadcrumbs>
+</MudItem>
+<br><br>
+<MudItem xs="12" sm="3" Class="object-center mx-auto my-auto">
+    <MudPaper Class="rounded-xl">
+        <br>
+        <MudText Style="mso-foreground: #1c648b; " Align="Align.Center" Typo="Typo.h4">QUAL É O SEU NEGÓCIO</MudText>
+        <br/>
+    </MudPaper>
+    <br/>
+    <p style="text-align: center; font-size: 14px; color: white">Selecione o seu segmento e conheça o produto ideal para o seu negócio.<br/>
+        Desde limpezas simples, até as mais pesadas, temos a solução.</p>
+</MudItem>
+<br><br><br><br><br>
+<NavProdutos/>
+
+@code
+{
+    private List<BreadcrumbItem> _items = new List<BreadcrumbItem>
+    {
+        new BreadcrumbItem("Home",href:"/"),
+        new BreadcrumbItem("Produtos", href:"/produtos", disabled:true)
+    };
+}
