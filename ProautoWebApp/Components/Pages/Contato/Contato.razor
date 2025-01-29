@@ -1,6 +1,45 @@
 @page "/Contato"
-<h3>Contato</h3>
+<br>
+<MudText Typo="Typo.h3" Align="Align.Center" Color="Color.Tertiary" Style="font-weight: bold">Contato</MudText>
+<MudText Typo="Typo.h6" Align="Align.Center" Style="font-weight: bold">Preencha o formulário abaixo para que um dos nossos consultores entre em contato</MudText>
+
+<MudGrid Justify="Justify.Center">
+    <MudItem>
+        <MudCard Elevation="0">
+            <MudForm Model="@contatoForm" @ref="form" Spacing="4">
+                <MudGrid>
+                    <MudItem xs="12" sm="6">
+                        <MudTextField T="string" Label="Qual o Seu nome?" @bind-Value="contatoForm.Nome"/>
+                    </MudItem>
+                    <MudItem xs="12" sm="6">
+                        <MudTextField T="string" Label="Qual o Seu Email?" @bind-Value="contatoForm.Nome"/>
+                    </MudItem >
+                    <MudFlexBreak/>
+                    <MudItem xs="12" sm="6">
+                        <MudTextField T="string" Label="Qual o número para contato?" @bind-Value="contatoForm.Telefone"/>
+                    </MudItem>
+                    <MudItem xs="12" sm="6">
+                        <MudTextField T="string" Label="Qual o nome da sua empresa?" @bind-Value="contatoForm.NomeEmpresa"/>
+                    </MudItem>
+                </MudGrid>
+                <MudTextField T="string" Label="Escreva sua mensagem aqui" Lines="10">/</MudTextField>
+            </MudForm>
+            <br><br>
+            <MudGrid Justify="Justify.SpaceBetween">
+                <MudItem>
+                    <MudCheckBox T="bool" Label="Desejo receber atualizações sobre os produtos" Color="Color.Tertiary" Style="color: gray"/>
+                </MudItem>
+                <MudItem>
+                    <MudButton Variant="Variant.Filled" Color="Color.Tertiary">Enviar</MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+<br><br><br><br><br>
 
 @code {
-    
+    public Contatos contatoForm = new();
+
+    MudForm form;
 }
